@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="url"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+
+.timer-display {
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    color: #2c3e50;
+}
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.timer-controls button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#startTimer { background-color: #007bff; color: white; border: none; }
+#startTimer:hover { background-color: #0056b3; }
+#pauseTimer { background-color: #ffc107; color: #333; border: none; }
+#pauseTimer:hover { background-color: #e0a800; }
+#resetTimer { background-color: #dc3545; color: white; border: none; }
+#resetTimer:hover { background-color: #c82333; }
+
+
+.goals-list, .resources-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.goals-list div, .resources-list li {
+    background-color: #ecf0f1;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95em;
+}
+
+.resources-list li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.resources-list li a:hover {
+    text-decoration: underline;
+}
+
+.goals-list div button, .resources-list li button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background-color 0.2s ease;
+}
+
+.goals-list div button:hover, .resources-list li button:hover {
+    background-color: #c82333;
+}
+
+
+.progress-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 25px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4CAF50; 
+    border-radius: 10px;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-overview p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr; 
+    }
+    form {
+        flex-direction: column;
+    }
+}

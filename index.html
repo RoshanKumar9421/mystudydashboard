@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Study Dashboard</h1>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="card pomodoro-timer">
+            <h2>Timer</h2>
+            <div class="timer-display">
+                <span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+            <div class="timer-controls">
+                <button id="startTimer">Start</button>
+                <button id="pauseTimer">Pause</button>
+                <button id="resetTimer">Reset</button>
+            </div>
+        </section>
+
+        <section class="card study-goals">
+            <h2>My Study Goals</h2>
+            <form id="goalForm">
+                <input type="text" id="subjectInput" placeholder="Subject (e.g., DSA)" required>
+                <input type="text" id="topicInput" placeholder="Topic (e.g., Array,LinkedList,Stack,Queue,..)" required>
+                <input type="number" id="hoursInput" placeholder="Target Hours" min="0.5" step="0.5" required>
+                <button type="submit">Add Goal</button>
+            </form>
+            <div id="goalsList" class="goals-list">
+                </div>
+        </section>
+
+        <section class="card resources-manager">
+            <h2>Study Resources</h2>
+            <form id="resourceForm">
+                <input type="text" id="resourceNameInput" placeholder="Resource Name" required>
+                <input type="url" id="resourceUrlInput" placeholder="URL (e.g., https://example.com)" required>
+                <button type="submit">Add Resource</button>
+            </form>
+            <ul id="resourcesList" class="resources-list">
+                </ul>
+        </section>
+
+        <section class="card progress-overview">
+            <h2>Overall Progress</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="overallProgressBar" style="width: 0%;"></div>
+            </div>
+            <p><span id="progressText">0</span>% Completed</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
